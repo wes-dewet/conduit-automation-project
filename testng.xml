@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Conduit Test Automation Suite">
+    <parameter name = "Browser" value = "Chrome"/>
+        <test name="Test Create New Article" >
+            <classes>
+                <class name="conduit.CreateNewArticleTests">
+                    <methods>
+                        <include name = "testCreateNewArticle"/>
+                    </methods>
+                </class>
+            </classes>
+        </test> <!-- Test -->
+        <test name="Test Article Title" >
+            <classes>
+                <class name="conduit.CreateNewArticleTests">
+                    <methods>
+                        <include name = "testTitle"/>
+                    </methods>
+                </class>
+            </classes>
+        </test> <!-- Test -->
+        <test name="Test Login" >
+            <classes>
+                <class name="conduit.LoginTests">
+                    <methods>
+                        <include name = "testUnsuccessfulLogin"/>
+                    </methods>
+                </class>
+            </classes>
+        </test> <!-- Test -->
+        <test name="Test Login API" >
+            <classes>
+                <class name="rest.conduit.LoginApiTests">
+                    <methods>
+                        <include name = "testApiLogin"/>
+                    </methods>
+                </class>
+            </classes>
+        </test> <!-- Test -->
+</suite> <!-- Suite -->
