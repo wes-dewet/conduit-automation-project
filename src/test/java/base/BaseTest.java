@@ -21,11 +21,11 @@ public class BaseTest {
     @Parameters({"Browser"})
     public void setUp(String browser){
         if(browser.equalsIgnoreCase("Chrome")){
-            System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
             driver = new ChromeDriver();
         }
         else if(browser.equalsIgnoreCase("Firefox")){
-            System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
             driver = new FirefoxDriver();
         }
 
